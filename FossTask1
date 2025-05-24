@@ -1,0 +1,265 @@
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS
+$ mkdir FOSS
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS
+$ cd FOSS
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS
+$ git clone https://github.com/Suvanwita/GitRepo.git
+Cloning into 'GitRepo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS
+$ ls
+GitRepo/
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS
+$ cd GitRepo
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ ls
+README.md
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ touch file.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ vi file.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ cat file.txt
+Chilli paneer
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git add .
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git commit -m "Added favourite food"
+[main 1bc4c76] Added favourite food
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git log --oneline
+1bc4c76 (HEAD -> main) Added favourite food
+612e6f8 (origin/main, origin/HEAD) Initial commit
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git checkout -b second_branch
+Switched to a new branch 'second_branch'
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ ls
+README.md  file.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ vi file.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ cat file.txt
+Chilli paneer
+Google
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ git status
+On branch second_branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ git add .
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ git commit -m "Added dream company"
+[second_branch 022b501] Added dream company
+ 1 file changed, 1 insertion(+)
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ git status
+On branch second_branch
+nothing to commit, working tree clean
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ git log --oneline
+022b501 (HEAD -> second_branch) Added dream company
+1bc4c76 (main) Added favourite food
+612e6f8 (origin/main, origin/HEAD) Initial commit
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git branch -l
+* main
+  second_branch
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ vi file.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ cat file.txt
+Chilli paneer
+Kolkata
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git add .
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git commit -m "Added city name"
+[main c839adb] Added city name
+ 1 file changed, 1 insertion(+)
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git log --oneline
+c839adb (HEAD -> main) Added city name
+1bc4c76 Added favourite food
+612e6f8 (origin/main, origin/HEAD) Initial commit
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git merge second_branch
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main|MERGING)
+$ vi file.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main|MERGING)
+$ cat file.txt
+Chilli paneer
+Kolkata
+Google
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main|MERGING)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main|MERGING)
+$ git add .
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main|MERGING)
+$ git commit -m "Merge conflict resolved"
+[main 710503b] Merge conflict resolved
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git log --oneline
+710503b (HEAD -> main) Merge conflict resolved
+c839adb Added city name
+022b501 (second_branch) Added dream company
+1bc4c76 Added favourite food
+612e6f8 (origin/main, origin/HEAD) Initial commit
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ cat file.txt
+Chilli paneer
+Kolkata
+Google
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git push origin main
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (12/12), 1.06 KiB | 1.06 MiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Suvanwita/GitRepo.git
+   612e6f8..710503b  main -> main
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git push origin
+Everything up-to-date
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git checkout second_branch
+Switched to branch 'second_branch'
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ git push origin second_branch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'second_branch' on GitHub by visiting:
+remote:      https://github.com/Suvanwita/GitRepo/pull/new/second_branch
+remote:
+To https://github.com/Suvanwita/GitRepo.git
+ * [new branch]      second_branch -> second_branch
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (second_branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git branch -l
+* main
+  second_branch
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$
