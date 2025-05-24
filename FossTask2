@@ -1,0 +1,214 @@
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ touch hello.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ vi hello.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git add .
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git commit -m "Initial commit with full name"
+[main 4c58f13] Initial commit with full name
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ vi hello.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git add .
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git commit -m "Added favourite tech stack"
+[main 86278ee] Added favourite tech stack
+ 1 file changed, 1 insertion(+)
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ vi hello.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git add .
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git commit -m "Added favourite hobby"
+[main b6b1dd0] Added favourite hobby
+ 1 file changed, 1 insertion(+)
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git log --oneline
+b6b1dd0 (HEAD -> main) Added favourite hobby
+86278ee Added favourite tech stack
+4c58f13 Initial commit with full name
+710503b (origin/main, origin/HEAD) Merge conflict resolved
+c839adb Added city name
+022b501 (origin/second_branch, second_branch) Added dream company
+1bc4c76 Added favourite food
+612e6f8 Initial commit
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git reset --soft b6b1dd0
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git log --oneline
+b6b1dd0 (HEAD -> main) Added favourite hobby
+86278ee Added favourite tech stack
+4c58f13 Initial commit with full name
+710503b (origin/main, origin/HEAD) Merge conflict resolved
+c839adb Added city name
+022b501 (origin/second_branch, second_branch) Added dream company
+1bc4c76 Added favourite food
+612e6f8 Initial commit
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git reset --soft 86278ee
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git log --oneline
+86278ee (HEAD -> main) Added favourite tech stack
+4c58f13 Initial commit with full name
+710503b (origin/main, origin/HEAD) Merge conflict resolved
+c839adb Added city name
+022b501 (origin/second_branch, second_branch) Added dream company
+1bc4c76 Added favourite food
+612e6f8 Initial commit
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.txt
+
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ cat hello.txt
+Suvanwita Das
+MERN
+Reading
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git reset --soft 4c58f13
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git log --oneline
+4c58f13 (HEAD -> main) Initial commit with full name
+710503b (origin/main, origin/HEAD) Merge conflict resolved
+c839adb Added city name
+022b501 (origin/second_branch, second_branch) Added dream company
+1bc4c76 Added favourite food
+612e6f8 Initial commit
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.txt
+
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git add .
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git commit -m "Combined changes from reset commits."
+[main 272409b] Combined changes from reset commits.
+ 1 file changed, 2 insertions(+)
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git log --oneline
+272409b (HEAD -> main) Combined changes from reset commits.
+4c58f13 Initial commit with full name
+710503b (origin/main, origin/HEAD) Merge conflict resolved
+c839adb Added city name
+022b501 (origin/second_branch, second_branch) Added dream company
+1bc4c76 Added favourite food
+612e6f8 Initial commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 2.40 KiB | 163.00 KiB/s, done.
+From https://github.com/Suvanwita/GitRepo
+ * branch            HEAD       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ FossTask1 | 265 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 265 insertions(+)
+ create mode 100644 FossTask1
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ ls
+FossTask1  README.md  file.txt  hello.txt
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 760 bytes | 760.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/Suvanwita/GitRepo.git
+   60b9560..28aa5ff  main -> main
+
+dsuva@SUVANWITA_DAS MINGW64 /c/SUVANWITA DAS/FOSS/GitRepo (main)
+$
